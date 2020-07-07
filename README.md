@@ -1,3 +1,3 @@
 Challenges 
 
-[csJourney Project Collection](https://codepen.io/collection/AQemax)
+[csJourney Project Collection](https://codepen.io/collection/AKGoxz)
