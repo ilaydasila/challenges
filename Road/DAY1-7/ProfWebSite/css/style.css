@@ -166,6 +166,7 @@ aside#sidebar .quote textarea {
   outline: none;
   background: rgba(153, 153, 153, 0.5);
   color: white;
+  margin-bottom: 8px;
 }
 
 article#main-col {
