@@ -4,6 +4,6 @@
 
 [CodePenk Link to Projects](https://codepen.io/collection/AKGoxz)
 
-[ProfWebSite Project](https://codepen.io/Ily94/project/details/ZBdjbo)
+[ProfWebSite Project](https://codepen.io/Ily94/project/full/ZBdjbo)
 
 ### DAY 8-14
