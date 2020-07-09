@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+body {
+  background: #ddd;
+}
+
+.pricing-area {
+  margin-top: 25px;
+}
+
+.single-pricing {
+  position: relative;
+  text-align: center;
+  background-color: #251d70;
+  color: #fff;
+  margin: 0 20px;
+  padding: 30px;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 10px #000000;
+}
+
+.head-text {
+  background-color: transparent;
+  border-bottom: 0;
+  padding: 15px 0;
+  border-radius: 3px 3px 0 0;
+}
+
+.head-text h3 {
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fafafa;
+}
+
+.price-area .price-area span {
+  font-weight: 600;
+}
+
+.price-area {
+  position: relative;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 64px;
+  line-height: 1;
+}
+
+.price-area span.duration {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 10px 0 0;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #afbedd;
+  margin-right: 20px 0 0 3px;
+}
+
+.price-area:after,
+.feature-area {
+  border: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.feature-area ul {
+  margin: 0;
+  padding: 15px 0;
+  list-style: none;
+}
+
+.feature-area li {
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+.btn-area {
+  padding: 15px 30px;
+}
+
+.btn-area a {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  outline: 0;
+  white-space: nowrap;
+  margin: 5px;
+  padding: 0 22px;
+  font-size: 14px;
+  font-weight: 600;
+  height: 40px;
+  line-height: 40px;
+  background-color: #afbedd;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: color 1s;
+}
+
+.btn-area a:hover {
+  color: #251d70;
+}
+
+.label-area {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  text-align: center;
+  border-top-right-radius: 3px;
+  background: #ef4368;
+}
+
+.label-area span {
+  position: absolute;
+  top: 22px;
+  right: 3px;
+  text-transform: uppercase;
+  transform: rotate(45deg);
+  font-weight: 700;
+  font-size: 12px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.label-area:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 80px 0 0 80px;
+  border-color: transparent transparent transparent #251d70;
+}
+
+@media (max-width: 767) {
+  h3 {
+    font-size: 20px;
+  }
+}
