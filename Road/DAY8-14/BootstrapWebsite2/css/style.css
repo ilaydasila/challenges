@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Galada&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header,
+section {
+  overflow-x: hidden;
+}
+
+:root {
+  --Roboto: "Roboto", cursive;
+  --Galada: "Galada", cursive;
+  --Rubik: "Rubik", cursive;
+
+  --light-black: #2e2c2caf;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--Roboto);
+}
+
+header a {
+  font-size: 0.9rem;
+  color: whitesmoke;
+}
+
+header {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  background: url(../assets/bg.png) no-repeat center;
+  background-size: cover;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 160px;
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+header .nav-item:last-child {
+  padding-right: 4em;
+}
+
+header .nav-item {
+  padding: 0.9em;
+  font-weight: 600;
+}
+
+header .navbar-brand {
+  padding-left: 5rem;
+  font-weight: 900;
+  font-family: var(--Galada);
+}
+
+header .nav-link:hover,
+header .navbar-brand:hover {
+  color: rgb(202, 202, 202);
+}
+
+header .row .col-md-5 {
+  padding: 4.2vmin 1vmin;
+}
+
+header .row .col-md-12 {
+  padding: 22vmin 1vmin;
+  padding-bottom: 20vmin;
+  font-family: var(--Rubik);
+  color: white;
+  font-weight: 900;
+}
+
+header .row .col-md-5 img {
+  width: 90%;
+}
+
+header .container .col-md-12 h1 {
+  font-size: 8.5vmin;
+  font-weight: bold;
+  padding: 0.1em 0em;
+  letter-spacing: 4px;
+}
+
+header .container .col-md-12 p {
+  padding: 1vmin 5vmin;
+}
+
+header .container .col-md-12 button {
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+/*section1*/
+
+.section-1 {
+  padding: 20vmin;
+}
+
+.section-1 .row .col-md-6 .pray img {
+  opacity: 0.8;
+  width: 100%;
+  border-radius: 0.2rem;
+  box-shadow: 0px 15px 32px rgba(0, 0, 0, 0.2);
+  padding: 5vmin;
+}
+
+.section-1 .row .col-md-6:last-child {
+  position: relative;
+}
+
+.section-1 .row .col-md-6 .panel h1 {
+  font-weight: bold;
+  padding: 0.4rem 0;
+  font-size: 2em;
+}
+
+.section-1 .row .col-md-6 .panel p {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/*section2*/
+.cover {
+  width: 100%;
+  height: 55vmin;
+  background: url("../assets/section2bg.jpg");
+  background-position: -24rem -19rem;
+  background-size: 150%;
+  position: relative;
+}
+
+.cover .content {
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  padding-top: 19vmin;
+}
+
+.cover .content > h1 {
+  font-size: 6vmin;
+  color: whitesmoke;
+  font-family: var(--Galada);
+}
+
+.cover .content > p {
+  font-size: 2vmin;
+  color: #e5e5e5;
+}
+
+.numbers .rect {
+  position: relative;
+  z-index: 1;
+  background: white;
+  width: 17rem;
+  height: 12rem;
+  padding-top: 3.5vmin;
+  margin: 1rem;
+  border-radius: 0.5em;
+  box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2);
+}
+
+.numbers {
+  margin-top: -15vmin;
+  font-weight: 800;
+}
+
+.numbers .rect h1 {
+  font-size: 5rem;
+  color: tomato;
+}
+
+.numbers .rect p {
+  font-family: var(--Rubik);
+}
+
+/*Buy*/
+
+.purchase > h1 {
+  padding-top: 15vmin;
+  padding-bottom: 0.1em;
+  font-family: var(--Galada);
+}
+
+.purchase > p {
+  color: var(--light-black);
+}
+
+.purchase .cards .card {
+  width: 22rem;
+  margin: 3vmin;
+}
+
+.card div {
+  padding: 0;
+  margin: 0;
+}
+
+.card .title {
+  font-family: var(--Galada);
+  background: #fff;
+  border-bottom: 1px solid rgb(230, 230, 230);
+  padding: 1rem 2rem;
+}
+
+.card .card-text {
+  padding: 2rem 2rem;
+}
+
+.card-body .pricing > h1 {
+  padding: 1rem 0.5em;
+  color: tomato;
+  font-weight: bold;
+}
+
+.card-body .pricing > a {
+  text-decoration: none;
+  font-family: var(--Rubik);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: rgb(68, 73, 119);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/*section 3 */
+
+.section-3 {
+  margin: 10vmin 0;
+}
+
+.section-3 .card {
+  width: 22rem;
+  margin-top: 5vmin;
+}
+
+.section-3 .card .card-text {
+  padding: 0.5em;
+}
+
+.section-3 .card .card-body > a {
+  font-size: 1.5em;
+}
+
+.section-3 .card .card-body .text {
+  color: tomato;
+}
+
+/*footer*/
+
+footer {
+  background: #181a1e;
+  overflow-x: hidden;
+  padding: 5vmin 8vmin;
+}
+
+footer .column > a {
+  font-size: 2.5rem;
+  padding: 1rem;
+  color: tomato;
+  transition: color 1s ease;
+}
+
+footer .title {
+  color: tomato;
+}
+
+footer .column > a:hover {
+  color: rgb(255, 207, 198);
+}
+
+@media only screen and (max-width: 768px) {
+  header .navbar-brand {
+    padding-left: 1rem;
+  }
+
+  .numbers .rect {
+    width: 10rem;
+    height: 9rem;
+  }
+
+  .numbers .rect h1 {
+    font-size: 2rem;
+  }
+
+  .section-3 .team {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  header .container .col-md-12 > p,
+  header .container .col-md-12 .btn {
+    display: none;
+  }
+
+  header .container .col-md-12 h1 {
+    margin-top: 90vmin;
+    font-weight: 900;
+  }
+
+  .section-3 .team {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-right: -100px;
+  }
+  .cover {
+    width: 100%;
+    height: 55vmin;
+    background: #181a1e;
+    background-position: -24rem -19rem;
+    background-size: 150%;
+    position: relative;
+  }
+}
