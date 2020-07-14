@@ -1,0 +1,39 @@
+body {
+  background-color: black;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.container img {
+  width: 100%;
+}
+
+.container button {
+  padding: 15px;
+  margin-bottom: 35px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: rgb(95, 153, 77);
+  border: 5px solid #fff;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
+}
+
+.container .on:hover {
+  cursor: pointer;
+  color: rgb(255, 252, 82);
+  border: 5px solid rgb(255, 252, 82);
+  box-shadow: 0 0 25px rgba(255, 252, 82, 0.9);
+}
+
+.container .off:hover {
+  cursor: pointer;
+  color: rgb(100, 100, 100);
+  border: 5px solid rgb(100, 100, 100);
+  box-shadow: 0 0 25px rgba(100, 100, 100, 0.9);
+}
