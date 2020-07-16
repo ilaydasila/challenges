@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator js</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+      <div class="flex-box">
+        <div class="wrapper">
+            <h2>Simple Calculator</h2>
+            <input type="text" name="num-one" id="num-one" />
+            <input type="text" name="num-two" id="num-two" />
+            <br />
+      
+            <button type="button" name="sign-area" id="box1" onclick="outcomeP()"><b>+</b>
+            <button type="button" name="sign-area" id="box2" onclick="outcomeS()"><b>-</b>
+            <button type="button" name="sign-area" id="box3" onclick="outcomeM()"><b>*</b>
+            <button type="button" name="sign-area" id="box4" onclick="outcomeD()"><b>/</b>
+          </div>
+              <h1 id="result-area"></h1>
+      </div>
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function outcomeP() {
+        const x =  Number(document.getElementById("num-one").value);
+        const y = Number(document.getElementById("num-two").value);
+        let z;
+          z = x + y;
+        document.getElementById("result-area").innerHTML = String(z);
+      }
+      function outcomeS() {
+        const x =  Number(document.getElementById("num-one").value);
+        const y = Number(document.getElementById("num-two").value);
+        let z;
+          z = x - y;
+        document.getElementById("result-area").innerHTML = String(z);}
+        function outcomeM() {
+        const x =  Number(document.getElementById("num-one").value);
+        const y = Number(document.getElementById("num-two").value);
+        let z;
+          z = x * y;
+        document.getElementById("result-area").innerHTML = String(z);}
+        function outcomeD() {
+        const x =  Number(document.getElementById("num-one").value);
+        const y = Number(document.getElementById("num-two").value);
+        let z;
+          z = x / y;
+        document.getElementById("result-area").innerHTML = String(z);}
+    </script>
+  </body>
+</html>
