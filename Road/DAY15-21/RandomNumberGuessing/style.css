@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Ovo&display=swap");
+
+* {
+  font-family: "Ovo", serif;
+}
+
+body {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #7fdbda;
+}
+
+.container {
+  overflow: hidden;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ede682;
+}
+
+button {
+  outline: none;
+  border: none;
+  padding: 2rem;
+  margin: 1rem;
+  font-size: 2rem;
+  font-weight: 800;
+  background-color: #febf63;
+  color: #fff;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+}
+
+button:hover {
+  text-shadow: 0px 0px 5px #eb7ed3;
+  cursor: pointer;
+  box-shadow: 0px 0px 15px #c548aa;
+}
+
+#p {
+  background: #ade498;
+  padding: 1rem;
+  color: #fff;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: default;
+}
+
+#p:empty {
+  display: none;
+}

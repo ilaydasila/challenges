@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button onClick="randomNumGenerator()">Start</button>
+      <button onClick="reload()">Try Again</button>
+      <p id="p"></p>
+    </div>
+    <script>
+      function randomNumGenerator() {
+        const limit = 10;
+        let counter = 0;
+        let maxTries = 5;
+        let userNum = null;
+
+        const randomNum = Math.floor(Math.random() * limit) + 1;
+        while (userNum != randomNum) {
+          userNum = prompt("Pick a number between 1 and" + limit, "0");
+          counter += 1;
+          if (userNum === null) {
+            break;
+          }
+          if (Number(randomNum) === Number(userNum)) {
+            document.getElementById("p").innerHTML =
+              "You won! The Number is " + randomNum;
+            break;
+          }
+          if (counter > maxTries) {
+            document.getElementById("p").innerHTML = "No more try";
+            break;
+          }
+        }
+      }
+      function reload() {
+        window.location.reload();
+      }
+    </script>
+  </body>
+</html>
