@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rowdies&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ba7967;
+}
+
+.center-align {
+  font-family: "Rowdies", cursive;
+  text-transform: uppercase;
+  letter-spacing: 1.2rem;
+  color: #633535;
+}
+
+.collection {
+  border: none;
+}
+
+#names {
+  border-radius: 15px;
+}
+
+#names .collection-header {
+  font-family: "Rowdies", cursive;
+  background: rgba(54, 54, 54, 0.5);
+}
+
+.collection.with-header .collection-header {
+  border: none;
+}
+
+ul > li {
+  text-transform: uppercase;
+  text-align: center;
+  color: #b7efcd;
+}
+
+.collection .collection-item {
+  border: none;
+  background-color: rgba(54, 54, 54, 0.3);
+}
+
+.collection .collection-item > a {
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+}
+
+#filterInput {
+  color: #fff;
+  letter-spacing: 0.2rem;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.3rem;
+}
