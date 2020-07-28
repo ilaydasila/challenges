@@ -1,1 +1,54 @@
+body {
+  background-color: rgb(241, 237, 241);
+  background-repeat: no-repeat;
+  background-size: 100% 1000px;
+}
 
+form {
+  background: #b9a3c5;
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5%;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+}
+
+label {
+  text-align: center;
+  margin-bottom: 8px;
+  color: #224166;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+input,
+select,
+textarea {
+  border: 2px solid rgb(241, 237, 241);
+  outline: none;
+  background: rgb(228, 212, 228);
+  color: #224166;
+  font-size: 18px;
+  padding: 4px;
+  margin: 0 10px;
+}
+
+.error-message {
+  color: #cf3535;
+  font-weight: bold;
+  font-size: 0.6em;
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
