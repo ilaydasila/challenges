@@ -43,6 +43,43 @@ class FormValidator extends Component {
     };
   }
 
+  handleSetTouched = (e) => {
+    let field = { ...this.state[e.target.name], isTouched: true };
+    this.setState({ [e.target.name]: { ...field } });
+  };
+
+  handleFieldChange = (e) => {
+    let state = { ...this.state };
+    state[e.target.name].value = e.target.value;
+    this.validateForm(state);
+  };
+
+  getClassName = (fieldName) => {
+    const field = this.state[fieldName];
+    return field.isTouched && !field.isValid ? "has-error" : "";
+  };
+
+  validateForm = (newState) => {
+    newState = newState || { ...this.state };
+    this.fields.forEach((fieldName) => {
+      let newField = newState[fieldName];
+      newField.errors = [];
+      newField.isValid = true;
+      this.formValidationRules[fieldName].forEach((vRule) => {
+        if (!vRule.rule(this.state[fieldName].value)) {
+          newField.errors.push(vRule.message);
+          newField.isValid = false;
+        }
+        newState[fieldName] = newField;
+      });
+    });
+    this.setState(newState);
+  };
+
+  componentWillMount() {
+    this.validateForm();
+  }
+
   render() {
     const { firstName, lastName, email, phone } = this.state;
     return (
@@ -53,6 +90,7 @@ class FormValidator extends Component {
             className={
               firstName.isTouched && !firstName.isValid ? "has error" : ""
             }
+            name='firstName'
             value={firstName.value}
             onChange={this.handleFieldChange}
             onBlur={this.handleSetTouched}
@@ -73,13 +111,14 @@ class FormValidator extends Component {
             className={
               lastName.isTouched && !lastName.isValid ? "has error" : ""
             }
+            name='lastName'
             value={lastName.value}
             onChange={this.handleFieldChange}
             onBlur={this.handleSetTouched}
           ></input>
           {lastName.isTouched &&
             lastName.errors.length > 0 &&
-            firstName.errors.map((err, i) => {
+            lastName.errors.map((err, i) => {
               return (
                 <span key={i} className='error-message'>
                   {err}
@@ -91,13 +130,14 @@ class FormValidator extends Component {
           <label>Email</label>
           <input
             className={email.isTouched && !email.isValid ? "has error" : ""}
+            name='email'
             value={email.value}
             onChange={this.handleFieldChange}
             onBlur={this.handleSetTouched}
           ></input>
           {email.isTouched &&
             email.errors.length > 0 &&
-            firstName.errors.map((err, i) => {
+            email.errors.map((err, i) => {
               return (
                 <span key={i} className='error-message'>
                   {err}
@@ -108,20 +148,19 @@ class FormValidator extends Component {
         <div className='field-group'>
           <label>Phone</label>
           <input
-            className={phone.isTouched && !phone.isValid ? "has error" : ""}
-            value={phone.value}
+            className={phone.isTouched && !phone.isValid ? "has-error" : ""}
+            name='phone'
+            value={this.state.phone.value}
             onChange={this.handleFieldChange}
             onBlur={this.handleSetTouched}
-          ></input>
+          />
           {phone.isTouched &&
             phone.errors.length > 0 &&
-            firstName.errors.map((err, i) => {
-              return (
-                <span key={i} className='error-message'>
-                  {err}
-                </span>
-              );
-            })}
+            phone.errors.map((err, i) => (
+              <span key={i} className='error-message'>
+                {err}
+              </span>
+            ))}
         </div>
       </form>
     );
