@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+  </head>
+  <body>
+    <div>
+      <p id="joke"></p>
+      <button id="btn">gimme a joke</button>
+      <script>
+        function getJoke() {
+          const URL = 'http://api.icndb.com/jokes/random';
+
+          fetch(URL)
+            .then((response) => response.json())
+            .then((myJson) => {
+              const joke = myJson.value.joke;
+              console.log(joke);
+              const jokeElement = (document.getElementById(
+                'joke'
+              ).innerHTML = joke);
+            });
+        }
+
+        const button = document.getElementById('btn');
+        button.addEventListener('click', getJoke);
+      </script>
+    </div>
+  </body>
+</html>
